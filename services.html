@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERITY AGENCIES - Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c8e6c9; /* Light Green */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em; /* Set the font size for the heading */
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #35424a;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            flex: 1; /* Allow the container to grow and take available space */
+        }
+        main {
+            background: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+            width: 100%;
+        }
+        /* New styles for image and text alignment */
+        .service-item {
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center items vertically */
+            margin-bottom: 20px; /* Space between items */
+            position: relative; /* Position relative for arrow positioning */
+        }
+        .service-item img {
+            width: 700px; /* Set image width */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 90px; /* Space between image and text */
+        }
+        .service-item p {
+            margin: 0; /* Remove default margin */
+            cursor: pointer; /* Change cursor to pointer */
+            color: #35424a; /* Text color */
+            text-decoration: none; /* Remove underline */
+        }
+        .service-item p:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+        .arrow {
+            position: absolute;
+            top: 240px; /* Position above the service name */
+            right: 150px; /* Position to the right */
+            font-size: 78px; /* Increase arrow size */
+            animation: bounce 1s infinite; /* Add bounce animation */
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px); /* Move up */
+            }
+        }
+        .click-on {
+            position: absolute;
+            top: 200px; /* Position above the arrow */
+            right: 120px; /* Align with the arrow */
+            font-size: 24px; /* Adjust font size for "click on" */
+            color: #ffffff; /* Text color */
+            background-color: #35424a; /* Background color for highlighting */
+            padding: 5px 10px; /* Padding around the text */
+            border-radius: 5px; /* Rounded corners */
+            font-weight: bold; /* Bold text */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Our Services</h1> <!-- Static heading without typing animation -->
+</header>
+
+<nav>
+    <div class="container">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="location.html">Location</a>
+    </div>
+</nav>
+
+<div class="container">
+    <main>
+        <section class="services">
+            <h2>Services We Offer</h2>
+            <p>At Perity Agencies, we provide a range of services to meet your logistics needs:</p>
+        </section>
+
+        <!-- Service items with images and text aligned -->
+        <div class="service-item">
+            <img src="img/car.jpg" alt="Import Cars">
+            <div>
+                <span class="click-on">click on</span>
+                <div class="arrow">↓</div>
+                <a href="https://wa.me/254721200549?text=I%20need%20a%20car" style="text-decoration: none; color: #197fbe;">
+                    <p style="font-weight: bold;">CAR</p>
+                </a>
+            </div>
+        </div>
+        <div class="service-item">
+            <img src="img/bitumen.jpg" alt="Import Bitumen">
+            <div>
+                <a href="https://wa.me/254721200549?text=I%20need%20bitumen" style="text-decoration: none; color: #187ebe;">
+                    <p style="font-weight: bold;">BITUMEN</p>
+                </a>
+            </div>
+        </div>
+        <div class="service-item">
+            <img src="img/sulpher.jpg" alt="Import Sulphur">
+            <div>
+                <a href="https://wa.me/254721200549?text=I%20need%20sulphur" style="text-decoration: none; color: #156da3;">
+                    <p style="font-weight: bold;">SULPHUR</p>
+                </a>
+            </div>
+        </div>
+        <div class="service-item">
+            <img src="img/iron coil.jpg" alt="Import Iron Coil">
+            <div>
+                <a href="https://wa.me/254721200549?text=I%20need%20iron%20coils" style="text-decoration: none; color: #1b7ab5;">
+                    <p style="font-weight: bold;">IRON COILS</p>
+                </a>
+            </div>
+        </div>
+        <div class="service-item">
+            <img src="img/iron sheet.jpg" alt="Import Iron Sheets">
+            <div>
+                <a href="https://wa.me/254721200549?text=I%20need%20steel%20purlins" style="text-decoration: none; color: #146496;">
+                    <p style="font-weight: bold;">STEEL PURLINS</p>
+                </a>
+            </div>
+        </div>
+        <div class="service-item">
+            <img src="img/machinary.jpg" alt="Import Machinery">
+            <div>
+                <a href="https://wa.me/254721200549?text=I%20need%20heavy%20machinary" style="text-decoration: none; color: #0a6197;">
+                    <p style="font-weight: bold;">MACHINERY</p>
+                </a>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; crafted for your business</p>
+</footer>
+</body>
+</html>

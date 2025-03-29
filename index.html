@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERITY AGENCIES - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b9db1; /* Light blue */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .typing {
+            font-size: 2em;
+            color: #00f2ff; /* Color for the text */
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: hidden; /* Hide the overflow */
+            border-right: 4px solid #f1efef; /* Cursor effect */
+            animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite; /* Typing and blinking cursor */
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #11bae4; }
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #35424a;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            flex: 1; /* Allow the container to grow and take available space */
+        }
+        main {
+            background: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+            width: 100%;
+            position: relative; /* Position relative for absolute positioning of the icon */
+        }
+        .whatsapp-icon {
+            position: absolute;
+            right: 20px; /* Adjust as needed */
+            bottom: 70px; /* Adjust as needed */
+            width: 50px; /* Size of the icon */
+            height: 50px; /* Size of the icon */
+            background-color: #25D366; /* WhatsApp green */
+            border-radius: 50%; /* Circular shape */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .whatsapp-icon img {
+            width: 70%; /* Adjust icon size */
+            height: auto;
+        }
+        .branding {
+            display: flex;
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            margin: 20px 0; /* Space around the branding section */
+        }
+        .branding img {
+            width: 100px; /* Adjust the size of the image */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 20px; /* Space between image and text */
+        }
+        .branding h1 {
+            color: red; /* Color for PERITY */
+            margin: 0; /* Remove default margin */
+        }
+        .branding h2 {
+            color: blue; /* Color for AGENCIES */
+            margin: 0; /* Remove default margin */
+        }
+        /* Align text and image */
+        .home {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            text-align: center; /* Center text */
+        }
+        .home img {
+            width: 100%; /* Make the image responsive */
+            max-width: 1000px; /* Set a max width */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="welcome-message" id="welcomeMessage">
+    <h1 class="typing">Welcome to Perity Agencies</h1></div>
+</header>
+
+<!-- Branding Section -->
+<div class="branding">
+    <img src="img/logo.jpg" alt="Brand Image"> <!-- Replace with your image path -->
+    <div>
+        <h1>PERITY</h1>
+        <h2>AGENCIES</h2>
+    </div>
+</div>
+
+<nav>
+    <div class="container">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="location.html">Location</a>
+    </div>
+</nav>
+
+<div class="container">
+    <main>
+        <section class="home">
+            <h2>Home</h2>
+            <p>Efficient Clearing & Forwarding Solutions for Seamless Logistics.</p>
+            <img src="img/home.jpg" alt="Home Image"> <!-- Replace with your image path -->
+        </section>
+    </main>
+</div>
+
+<!-- WhatsApp Icon -->
+<a href="https://wa.me/254721200549" class="whatsapp-icon" target="_blank" title="Chat with us on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+</a>
+
+<footer>
+    <p>&copy; 2025 crafted for your business</p>
+</footer>
+<script>
+    // Function to fade out the welcome message
+    function fadeOutWelcomeMessage() {
+        const welcomeMessage = document.getElementById('welcomeMessage');
+        welcomeMessage.classList.add('fade-out');
+        
+        // Remove the message from the DOM after the fade-out transition
+        setTimeout(() => {
+            welcomeMessage.style.display = 'none';
+        }, 1000); // Match this duration with the CSS transition duration
+    }
+
+    // Display the welcome message for 8 seconds before fading out
+    setTimeout(fadeOutWelcomeMessage, 8000);
+</script>
+</body>
+</html>
+
+    

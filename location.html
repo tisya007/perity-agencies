@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERITY AGENCIES - Location</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #13f3cad3; /* Light blue */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em; /* Set the font size for the heading */
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #35424a;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            flex: 1; /* Allow the container to grow and take available space */
+        }
+        main {
+            background: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+            width: 100%;
+        }
+        img {
+            max-width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 20px; /* Space above the image */
+            border-radius: 5px; /* Optional: add rounded corners */
+        }
+        .location {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center align items */
+            text-align: center; /* Center text */
+        }
+        .location h2 {
+            margin: 0; /* Remove default margin */
+        }
+        .location a {
+            margin: 10px 0; /* Space between heading and link */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Our Location</h1> <!-- Static heading -->
+</header>
+
+<nav>
+    <div class="container">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="location.html">Location</a>
+    </div>
+</nav>
+
+<div class="container">
+    <main>
+        <section class="location">
+            <h2>Where to Find Us</h2>
+            <a href="https://maps.app.goo.gl/BHUsCBgzUv825iWX7" target="_blank">View Location on Google Maps</a>
+            <img src="img/location.jpg" alt="Location Image" width="300" height="200">
+        </section>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2025 crafted for your business</p>
+</footer>
+
+</body>
+</html>
