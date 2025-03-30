@@ -60,47 +60,68 @@
             margin-bottom: 20px; /* Space between items */
             position: relative; /* Position relative for arrow positioning */
         }
+
         .service-item img {
-            width: 500px; /* Set image width */
+            width: 100%; /* Set image width to 100% for responsiveness */
+            max-width: 500px; /* Set a max width for larger screens */
             height: auto; /* Maintain aspect ratio */
-            margin-right: 40px; /* Space between image and text */
+            margin-right: 30px; /* Space between image and text */
         }
-]        .service-item p {
+
+        .service-item .click-on {
+            font-size: 24px; /* Adjust font size for "click on" */
+            color: #ffffff; /* Text color */
+            background-color: #35424a; /* Background color for highlighting */
+            padding: 5px 10px; /* Padding around the text */
+            border-radius: 5px; /* Rounded corners */
+            font-weight: bold; /* Bold text */
+            margin-top: 15px; /* Reduced space between image and "click on" */
+        }
+
+        @keyframes bounce {
+        0%, 100% {
+         transform: translateY(0);
+        }
+        50% {
+         transform: translateY(-10px); /* Move up */
+            }
+       }
+
+       .service-item .arrow {
+        font-size: 48px; /* Adjust arrow size for better visibility */
+        margin-top: 5px; /* Reduce space between "click on" and arrow */
+        animation: bounce 1s infinite; /* Apply the bounce animation */
+       }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 600px) {
+            .service-item {
+                flex-direction: column; /* Stack items vertically */
+                align-items: flex-start; /* Align items to the start */
+            }
+
+            .service-item img {
+                margin-right: 0; /* Remove right margin on mobile */
+                margin-bottom: 10px; /* Add space below the image */
+            }
+
+            .service-item .click-on {
+                margin-top: 5px; /* Adjust margin for mobile */
+            }
+
+            .service-item .arrow {
+                font-size: 36px; /* Smaller arrow size for mobile */
+            }
+        }
+
+        .service-item p {
             margin: 0; /* Remove default margin */
             cursor: pointer; /* Change cursor to pointer */
-            color: #35424a; /* Text color */
+            color: #1a9aea; /* Text color */
             text-decoration: none; /* Remove underline */
         }
         .service-item p:hover {
             text-decoration: underline; /* Add underline on hover */
-        }
-        .service-item .arrow {
-         position: absolute;
-         top: 145px; /* Position above the service name */
-         right: 395px; /* Position to the right */
-         font-size: 78px; /* Increase arrow size */
-         animation: bounce 1s infinite; /* Add bounce animation */
-         margin-top: 40px; /* Add space between image and arrow */
-        }
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px); /* Move up */
-            }
-        }
-        .service-item .click-on {
-         position: absolute;
-         top: 110px; /* Position above the arrow */
-         right: 365px; /* Align with the arrow */
-         font-size: 24px; /* Adjust font size for "click on" */
-         color: #ffffff; /* Text color */
-         background-color: #35424a; /* Background color for highlighting */
-         padding: 5px 10px; /* Padding around the text */
-         border-radius: 5px; /* Rounded corners */
-         font-weight: bold; /* Bold text */
-         margin-top: 40px; /* Add space between image and "click on" */
         }
     </style>
 </head>
@@ -180,9 +201,8 @@
         </div>
     </main>
 </div>
-
 <footer>
-    <p>&copy; crafted for your business</p>
+    <p>&copy;2025 crafted for your business</p>
 </footer>
 </body>
 </html>
