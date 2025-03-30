@@ -42,6 +42,7 @@
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 5px;
+            position: relative; /* Position relative for absolute children */
         }
         footer {
             text-align: center;
@@ -49,6 +50,26 @@
             background: #35424a;
             color: #ffffff;
             width: 100%;
+        }
+        /* Slideshow styles */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%; /* Full width */
+            margin: auto;
+            height: 300px; /* Set a height for the slideshow */
+            overflow: hidden; /* Hide overflow */
+        }
+        .slideshow-container img {
+            width: 45%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute; /* Position images absolutely */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            opacity: 0; /* Hide images by default */
+            transition: opacity 1s ease; /* Smooth transition */
+        }
+        .slideshow-container img.active {
+            opacity: 1; /* Show active image */
         }
     </style>
 </head>
@@ -72,6 +93,14 @@
     <main>
         <section class="about">
             <h2>About Us</h2>
+            <div class="slideshow-container">
+                <img src="image1.jpg" alt="Image 1" class="active">
+                <img src="image2.jpg" alt="Image 2">
+                <img src="image3.jpg" alt="Image 3">
+                <img src="image4.jpg" alt="Image 4">
+                <img src="image5.jpg" alt="Image 5">
+                <img src="image6.jpg" alt="Image 6">
+            </div>
             <p>We are a certified clearing and forwarding company providing logistics solutions. Our mission is to simplify international trade and ensure timely, cost-effective delivery of goods, services, and general supplies that is;</p>
             <ul>
                 <li>Fast Customs Clearance</li>
@@ -87,6 +116,24 @@
 <footer>
     <p>&copy; 2025 crafted for your business</p>
 </footer>
+
+<script>
+    let currentIndex = 0; // Start with the first image
+    const images = document.querySelectorAll('.slideshow-container img'); // Select all images
+    const totalImages = images.length; // Get the total number of images
+
+    function showNextImage() {
+        // Hide the current image
+        images[currentIndex].classList.remove('active');
+        // Move to the next image
+        currentIndex = (currentIndex + 1) % totalImages; // Loop back to the first image
+        // Show the next image
+        images[currentIndex].classList.add('active');
+    }
+
+    // Change image every 3 seconds
+    setInterval(showNextImage, 3000);
+</script>
 
 </body>
 </html>
