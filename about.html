@@ -58,18 +58,36 @@
             margin: auto;
             height: 300px; /* Set a height for the slideshow */
             overflow: hidden; /* Hide overflow */
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center images horizontally */
+            align-items: center; /* Center images vertically */
         }
         .slideshow-container img {
-            width: 100%; /* Full width */
-            height: auto; /* Maintain aspect ratio */
+            width: auto; /* Maintain aspect ratio */
+            height: 8cm; /* Full height of the container */
+            object-fit: cover; /* Avoid zooming in */
             position: absolute; /* Position images absolutely */
             top: 0; /* Align to the top */
-            left: 0; /* Align to the left */
+            left: 50%; /* Shift to the center */
+            transform: translateX(-50%); /* Center the image using transform */
             opacity: 0; /* Hide images by default */
             transition: opacity 1s ease; /* Smooth transition */
         }
         .slideshow-container img.active {
             opacity: 1; /* Show active image */
+        }
+        /* Centering styles */
+        .about {
+            text-align: center; /* Center text */
+        }
+        .about ul {
+            list-style-type: none; /* Remove default bullet style */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margin */
+            display: inline-block; /* Center the list */
+        }
+        .about ul li {
+            margin: 10px 0; /* Space between bullet points */
         }
     </style>
 </head>
@@ -107,7 +125,7 @@
                 <img src="image11.jpg" alt="Image 11">
                 <img src="image12.jpg" alt="Image 12">
             </div>
-            <p>We are a certified clearing and forwarding company providing logistics solutions. Our mission is to simplify international trade and ensure timely, cost-effective delivery of goods, services and general supplies.we serve you by providing;</p>
+            <p>We are a certified clearing and forwarding company providing logistics solutions. Our mission is to simplify international trade and ensure timely, cost-effective delivery of goods, services, and general supplies that is;</p>
             <ul>
                 <li>Fast Customs Clearance</li>
                 <li>Freight Forwarding</li>
